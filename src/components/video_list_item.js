@@ -1,11 +1,13 @@
 import React from 'react';
 
-const VideoListItem = ({video}) => {
+const VideoListItem = ({video, updateAppStateSelectedVideo}) => {
   console.log(video);
   //const video = props.video; replaced by {video} above
 
   return (
-    <li className='list-group-item'>
+    <li
+      onClick={() => updateAppStateSelectedVideo(video)}
+      className='list-group-item'>
       <div className='video-list media'>
         <div className='media-left'>
           <img
